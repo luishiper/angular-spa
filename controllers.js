@@ -10,7 +10,7 @@ weatherApp.controller('homeController', ['$scope', '$location', 'cityService', f
 
 weatherApp.controller('forecastController', ['$scope', '$routeParams', 'cityService', 'weatherService', function($scope, $routeParams, cityService, weatherService){
     
-    $scope.city = cityService.city;
+    $scope.city = cityService.city.length() != 0 ? cityService.city : 'New York';
                                              
     $scope.days = $routeParams.days || '2';
     
