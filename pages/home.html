@@ -5,7 +5,7 @@
             <div class="form-group">
                 <input type="text" class="form-control" ng-model="city.name" placeholder="ex: New York" required/>
             </div>
-            <input type="submit" class="btn btn-primary" value="Get Forecast"/>
+            <input type="submit" class="btn btn-primary" ng-disabled="!city.name" value="Get Forecast"/>
         </form>
     </div>
 </div>
