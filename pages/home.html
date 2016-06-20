@@ -3,7 +3,7 @@
         <h4>Forecast by City</h4>
         <form ng-submit="submit()">
             <div class="form-group">
-                <input id="searchQueryBox" class="form-control" name="searchStringCity" type="text" size="25" value="" ng-model="city.name" tabindex="1" placeholder="ex: New York" required>
+                <input class="form-control" id="searchQueryBox" name="searchStringCity" type="text" ng-model="city.name" autocomplete="on" placeholder="ex: New York" required>
             </div>
             <input type="submit" class="btn btn-primary" value="Get Forecast"/>
         </form>
