@@ -11,6 +11,10 @@ weatherApp.controller('homeController', ['$scope', '$location', 'cityService', f
 weatherApp.controller('forecastController', ['$scope', '$routeParams', 'cityService', 'weatherService', function($scope, $routeParams, cityService, weatherService){
     
     $scope.city = cityService.city;
+    
+    //default city for browsers without angularJS
+    if($scope.city.name.length == 0)
+        $scope.city.name = "New York";
                                              
     $scope.days = $routeParams.days || '2';
     
